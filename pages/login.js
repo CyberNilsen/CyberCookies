@@ -1,31 +1,26 @@
-// pages/login.js
-// This creates the login page route at '/login'
-// Currently only visual - no actual login functionality implemented
+
 
 import { useState } from 'react'
 import Layout from '../components/Layout'
 import styles from '../styles/Login.module.css'
 
 export default function Login() {
-  // State to track form input values
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   
-  // State to track if we're in login or signup mode
   const [isSignup, setIsSignup] = useState(false)
 
-  // Handle form submission (currently just prevents default behavior)
   const handleSubmit = (e) => {
-    e.preventDefault() // Prevents page from refreshing
+    e.preventDefault()
     console.log('Form submitted with:', { email, password })
-    // Here you would typically send data to your backend
+
     alert('Login functionality will be implemented later!')
   }
 
-  // Toggle between login and signup forms
   const toggleMode = () => {
     setIsSignup(!isSignup)
-    // Clear form when switching modes
+
     setEmail('')
     setPassword('')
   }
@@ -35,7 +30,7 @@ export default function Login() {
       <div className={styles.loginContainer}>
         <div className={styles.loginCard}>
           
-          {/* Login Form Header */}
+          {}
           <div className={styles.loginHeader}>
             <div className={styles.cookieIcon}>🍪</div>
             <h1 className={styles.loginTitle}>
@@ -49,10 +44,10 @@ export default function Login() {
             </p>
           </div>
 
-          {/* Login/Signup Form */}
+          {}
           <form onSubmit={handleSubmit} className={styles.loginForm}>
             
-            {/* Email Input Field */}
+            {}
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.formLabel}>
                 Email Address
@@ -68,7 +63,7 @@ export default function Login() {
               />
             </div>
 
-            {/* Password Input Field */}
+            {}
             <div className={styles.formGroup}>
               <label htmlFor="password" className={styles.formLabel}>
                 Password
@@ -84,7 +79,7 @@ export default function Login() {
               />
             </div>
 
-            {/* Additional fields for signup */}
+            {}
             {isSignup && (
               <div className={styles.formGroup}>
                 <label htmlFor="confirmPassword" className={styles.formLabel}>
@@ -100,7 +95,7 @@ export default function Login() {
               </div>
             )}
 
-            {/* Remember Me Checkbox (only for login) */}
+            {}
             {!isSignup && (
               <div className={styles.formOptions}>
                 <label className={styles.checkboxLabel}>
@@ -113,13 +108,13 @@ export default function Login() {
               </div>
             )}
 
-            {/* Submit Button */}
+            {}
             <button type="submit" className={styles.submitButton}>
               {isSignup ? 'Create Account' : 'Sign In'}
             </button>
           </form>
 
-          {/* Social Login Options */}
+          {}
           <div className={styles.socialLogin}>
             <div className={styles.divider}>
               <span className={styles.dividerText}>Or continue with</span>
@@ -137,7 +132,7 @@ export default function Login() {
             </div>
           </div>
 
-          {/* Toggle between login and signup */}
+          {}
           <div className={styles.toggleMode}>
             <p className={styles.toggleText}>
               {isSignup ? 'Already have an account?' : "Don't have an account?"}

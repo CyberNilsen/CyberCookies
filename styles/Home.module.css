@@ -1,15 +1,10 @@
-/* styles/Home.module.css */
-/* CSS Module styles for the home page */
-/* CSS Modules automatically scope styles to components to avoid conflicts */
 
-/* Container for centering content */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Hero Section - Main banner at top of page */
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 80vh;
@@ -74,7 +69,6 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* Floating animation for cookie emoji */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -84,7 +78,6 @@
   }
 }
 
-/* Features Section */
 .features {
   padding: 100px 0;
   background: #f8f9fa;
@@ -138,7 +131,6 @@
   font-size: 1rem;
 }
 
-/* Popular Cookies Section */
 .popularCookies {
   padding: 100px 0;
   background: white;
@@ -183,7 +175,6 @@
   line-height: 1.5;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;

@@ -1,6 +1,4 @@
-// pages/recipes.js
-// This is the recipes page component
-// Shows various cookie recipes with ingredients and instructions
+
 
 import Layout from '../components/Layout'
 import styles from '../styles/Recipes.module.css'
@@ -128,7 +126,7 @@ export default function Recipes() {
 
   return (
     <Layout>
-      {/* Page Header */}
+      {}
       <section className={styles.header}>
         <div className={styles.container}>
           <h1 className={styles.pageTitle}>Cookie Recipes</h1>
@@ -138,7 +136,7 @@ export default function Recipes() {
         </div>
       </section>
 
-      {/* Recipes Grid */}
+      {}
       <section className={styles.recipesSection}>
         <div className={styles.container}>
           <div className={styles.recipesGrid}>
@@ -181,7 +179,7 @@ export default function Recipes() {
         </div>
       </section>
 
-      {/* Baking Tips Section */}
+      {}
       <section className={styles.tipsSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Baking Tips for Perfect Cookies</h2>

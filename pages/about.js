@@ -1,6 +1,4 @@
-// pages/about.js
-// This creates the about page route at '/about'
-// Contains information about cookies in general
+
 
 import Layout from '../components/Layout'
 import styles from '../styles/About.module.css'
@@ -10,7 +8,7 @@ export default function About() {
     <Layout>
       <div className={styles.aboutContainer}>
         
-        {/* Page Header */}
+        {}
         <section className={styles.aboutHeader}>
           <div className={styles.container}>
             <h1 className={styles.pageTitle}>All About Cookies</h1>
@@ -20,10 +18,10 @@ export default function About() {
           </div>
         </section>
 
-        {/* Main Content */}
+        {}
         <div className={styles.container}>
           
-          {/* What are Cookies Section */}
+          {}
           <section className={styles.contentSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionIcon}>🍪</span>
@@ -44,7 +42,7 @@ export default function About() {
             </div>
           </section>
 
-          {/* Cookie Components Section */}
+          {}
           <section className={styles.contentSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionIcon}>🥄</span>
@@ -90,7 +88,7 @@ export default function About() {
             </div>
           </section>
 
-          {/* Cookie Types Section */}
+          {}
           <section className={styles.contentSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionIcon}>🎯</span>
@@ -148,7 +146,7 @@ export default function About() {
             </div>
           </section>
 
-          {/* Fun Facts Section */}
+          {}
           <section className={styles.contentSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionIcon}>🎉</span>

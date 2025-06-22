@@ -1,6 +1,4 @@
-// pages/history.js
-// This is the history page component
-// Shows the fascinating history and evolution of cookies
+
 
 import Layout from '../components/Layout'
 import styles from '../styles/History.module.css'
@@ -86,7 +84,7 @@ export default function History() {
 
   return (
     <Layout>
-      {/* Page Header */}
+      {}
       <section className={styles.header}>
         <div className={styles.container}>
           <h1 className={styles.pageTitle}>The Sweet History of Cookies</h1>
@@ -96,7 +94,7 @@ export default function History() {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {}
       <section className={styles.timelineSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Cookie Timeline</h2>
@@ -115,7 +113,7 @@ export default function History() {
         </div>
       </section>
 
-      {/* World Cookies Section */}
+      {}
       <section className={styles.worldSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Cookies Around the World</h2>
@@ -134,7 +132,7 @@ export default function History() {
         </div>
       </section>
 
-      {/* Fun Facts Section */}
+      {}
       <section className={styles.factsSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Sweet Cookie Facts</h2>
@@ -159,7 +157,7 @@ export default function History() {
         </div>
       </section>
 
-      {/* Cookie Evolution Section */}
+      {}
       <section className={styles.evolutionSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>How Cookies Changed the World</h2>

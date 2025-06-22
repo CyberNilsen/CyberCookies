@@ -1,5 +1,3 @@
-/* styles/History.module.css */
-/* CSS Module styles for the history page */
 
 .container {
   max-width: 1200px;
@@ -7,7 +5,6 @@
   padding: 0 20px;
 }
 
-/* Page Header */
 .header {
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
   padding: 80px 0;
@@ -30,7 +27,6 @@
   line-height: 1.6;
 }
 
-/* Timeline Section */
 .timelineSection {
   padding: 80px 0;
   background: #f8f9fa;
@@ -151,7 +147,6 @@
   font-size: 0.95rem;
 }
 
-/* World Section */
 .worldSection {
   padding: 80px 0;
   background: white;
@@ -202,7 +197,6 @@
   opacity: 0.9;
 }
 
-/* Facts Section */
 .factsSection {
   padding: 80px 0;
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
@@ -242,7 +236,6 @@
   font-size: 0.95rem;
 }
 
-/* Evolution Section */
 .evolutionSection {
   padding: 80px 0;
   background: #f8f9fa;
@@ -325,7 +318,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .pageTitle {
     font-size: 2.5rem;
@@ -350,7 +342,6 @@
     font-size: 2rem;
   }
 
-  /* Mobile Timeline */
   .timeline::before {
     left: 30px;
   }

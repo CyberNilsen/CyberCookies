@@ -1,5 +1,4 @@
-/* styles/Footer.module.css */
-/* Styles for the footer component */
+
 
 .footer {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -25,7 +24,6 @@
   flex-direction: column;
 }
 
-/* Footer titles and branding */
 .footerTitle {
   display: flex;
   align-items: center;
@@ -53,7 +51,6 @@
   color: #ecf0f1;
 }
 
-/* Footer links styling */
 .footerLinks {
   list-style: none;
   padding: 0;
@@ -75,7 +72,6 @@
   color: #ffd700;
 }
 
-/* Social media links */
 .socialLinks {
   display: flex;
   gap: 15px;
@@ -100,7 +96,6 @@
   transform: translateY(-2px);
 }
 
-/* Footer bottom section */
 .footerBottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
@@ -136,7 +131,6 @@
   color: #ffd700;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .footerContent {
     grid-template-columns: 1fr;

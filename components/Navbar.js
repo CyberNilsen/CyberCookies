@@ -1,16 +1,12 @@
-// components/Navbar.js
-// This component creates the navigation bar that appears at the top of every page
-// It includes links to different pages and a login button
 
-import Link from 'next/link' // Next.js Link component for client-side navigation
-import { useState } from 'react' // React hook for managing component state
+import Link from 'next/link' 
+import { useState } from 'react' 
 import styles from '../styles/Navbar.module.css'
 
 export default function Navbar() {
-  // State to track if mobile menu is open or closed
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  // Function to toggle mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -19,13 +15,13 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         
-        {/* Logo/Brand name - links to homepage */}
+        {}
         <Link href="/" className={styles.navLogo}>
           <span className={styles.logoIcon}>🍪</span>
           Cybercookies
         </Link>
 
-        {/* Desktop Navigation Menu */}
+        {}
         <div className={styles.navMenu}>
           <Link href="/" className={styles.navLink}>
             Home
@@ -41,12 +37,12 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Login Button */}
+        {}
         <Link href="/login" className={styles.loginButton}>
           Login
         </Link>
 
-        {/* Mobile Menu Toggle Button (hamburger menu) */}
+        {}
         <button 
           className={styles.mobileMenuToggle}
           onClick={toggleMenu}
@@ -58,7 +54,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu - only shows when isMenuOpen is true */}
+      {}
       {isMenuOpen && (
         <div className={styles.mobileMenu}>
           <Link href="/" className={styles.mobileNavLink} onClick={toggleMenu}>
