@@ -1,0 +1,286 @@
+/* styles/About.module.css */
+/* Styles for the about page */
+
+.aboutContainer {
+  min-height: 80vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Page header */
+.aboutHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Content sections */
+.contentSection {
+  padding: 60px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.contentSection:last-child {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionIcon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sectionContent {
+  max-width: 800px;
+  margin-left: 3.5rem;
+}
+
+.sectionContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.sectionContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* Components grid */
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-left: 3.5rem;
+}
+
+.componentCard {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.componentCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.componentIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.componentCard h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.componentCard p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Cookie types grid */
+.typesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-left: 3.5rem;
+}
+
+.typeCard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.typeCard:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.1);
+}
+
+.typeCard h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.typeCard p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Fun facts list */
+.factsList {
+  margin-left: 3.5rem;
+}
+
+.factItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.factItem:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.factNumber {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.factItem p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.2rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .aboutHeader {
+    padding: 60px 0;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .sectionIcon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .sectionContent,
+  .componentsGrid,
+  .typesGrid,
+  .factsList {
+    margin-left: 0;
+  }
+
+  .componentsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .typesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .factItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .factNumber {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .factItem p {
+    padding-top: 0;
+  }
+
+  .contentSection {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionIcon {
+    font-size: 2rem;
+  }
+
+  .componentCard,
+  .typeCard {
+    padding: 20px;
+  }
+}

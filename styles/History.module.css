@@ -1,0 +1,454 @@
+/* styles/History.module.css */
+/* CSS Module styles for the history page */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Page Header */
+.header {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: #8b4513;
+}
+
+.pageTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.pageDescription {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Timeline Section */
+.timelineSection {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.timelineItem:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timelineItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timelineIcon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 4px solid #667eea;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.timelineContent {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: calc(50% - 50px);
+  position: relative;
+  border: 1px solid #e9ecef;
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+  margin-right: auto;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+  margin-left: auto;
+}
+
+.timelineContent::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  transform: translateY(-50%);
+}
+
+.timelineItem:nth-child(odd) .timelineContent::before {
+  right: -30px;
+  border-left-color: white;
+}
+
+.timelineItem:nth-child(even) .timelineContent::before {
+  left: -30px;
+  border-right-color: white;
+}
+
+.timelinePeriod {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timelineTitle {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.timelineDescription {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* World Section */
+.worldSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.worldGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.worldCard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.worldCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+}
+
+.worldFlag {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.worldCountry {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.worldName {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.worldDescription {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Facts Section */
+.factsSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.factsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.factCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.factCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.factNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.factCard p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Evolution Section */
+.evolutionSection {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.evolutionContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.evolutionText h3 {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.evolutionText h3:first-child {
+  margin-top: 0;
+}
+
+.evolutionText p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.evolutionImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookieStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stackCookie {
+  font-size: 4rem;
+  animation: bounce 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.stackCookie:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stackCookie:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stackCookie:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.stackCookie:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.stackCookie:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .pageDescription {
+    font-size: 1.1rem;
+  }
+
+  .header {
+    padding: 60px 0;
+  }
+
+  .timelineSection,
+  .worldSection,
+  .factsSection,
+  .evolutionSection {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  /* Mobile Timeline */
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineItem {
+    flex-direction: row !important;
+    margin-bottom: 2rem;
+  }
+
+  .timelineIcon {
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .timelineContent {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+  }
+
+  .timelineContent::before {
+    left: -15px !important;
+    right: auto !important;
+    border-right-color: white !important;
+    border-left-color: transparent !important;
+  }
+
+  .worldGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .factsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .evolutionContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .cookieStack {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .stackCookie {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timelineIcon {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .timelineContent {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    padding: 20px;
+  }
+
+  .factsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .factNumber {
+    font-size: 2.5rem;
+  }
+
+  .worldCard {
+    padding: 25px;
+  }
+
+  .worldFlag {
+    font-size: 2.5rem;
+  }
+
+  .evolutionText h3 {
+    font-size: 1.5rem;
+  }
+
+  .stackCookie {
+    font-size: 2.5rem;
+  }
+}
