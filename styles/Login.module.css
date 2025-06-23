@@ -220,6 +220,30 @@
   color: #5a6fd8;
 }
 
+.errorMessage {
+  background: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fcc;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.formInput:disabled,
+.submitButton:disabled,
+.socialButton:disabled,
+.toggleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submitButton:disabled:hover {
+  background: #8B4513;
+  transform: none;
+}
+
 @media (max-width: 480px) {
   .loginContainer {
     padding: 20px 15px;

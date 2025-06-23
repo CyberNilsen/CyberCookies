@@ -133,6 +133,157 @@
   border-bottom: none;
 }
 
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userGreeting {
+  color: #8B4513;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #8B4513;
+  border: 1px solid #8B4513;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+  background: #8B4513;
+  color: white;
+}
+
+.authButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.authButton {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.loginButton {
+  color: #8B4513;
+  border: 1px solid transparent;
+}
+
+.loginButton:hover {
+  background: rgba(139, 69, 19, 0.1);
+}
+
+.signupButton {
+  background: #8B4513;
+  color: white;
+  border: 1px solid #8B4513;
+}
+
+.signupButton:hover {
+  background: #A0522D;
+  border-color: #A0522D;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userGreeting {
+  color: #8B4513;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #8B4513;
+  border: 1px solid #8B4513;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.logoutButton:hover {
+  background: #8B4513;
+  color: white;
+}
+
+/* Active link styles */
+.navLink.active,
+.mobileNavLink.active {
+  color: #8B4513;
+  font-weight: 600;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #8B4513;
+  border-radius: 1px;
+}
+
+/* Mobile Auth Styles */
+.mobileAuthSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  margin-top: 0.5rem;
+}
+
+.mobileUserGreeting {
+  color: #8B4513;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.mobileLogoutButton {
+  padding: 0.75rem 1rem;
+  background: transparent;
+  color: #8B4513;
+  border: 1px solid #8B4513;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 1rem;
+}
+
+.mobileLogoutButton:hover {
+  background: #8B4513;
+  color: white;
+}
+
+
 @media (max-width: 768px) {
   .navMenu {
     display: none;
@@ -161,10 +312,28 @@
   .logoIcon {
     font-size: 1.5rem;
   }
+
+   .userMenu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .userGreeting {
+    font-size: 0.8rem;
+  }
+  
+  .authButtons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }
 
 @media (max-width: 768px) {
   .mobileMenuToggle:hover .hamburger {
     background: #667eea;
+  }
+
+    .mobileAuthSection {
+    display: none;
   }
 }
