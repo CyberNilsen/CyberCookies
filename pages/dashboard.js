@@ -1,4 +1,3 @@
-// pages/dashboard.js
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
@@ -27,7 +26,7 @@ export default function Dashboard() {
   }
 
   if (!user) {
-    return null // Will redirect to login
+    return null 
   }
 
   return (
@@ -39,7 +38,7 @@ export default function Dashboard() {
         </div>
 
         <div className={styles.grid}>
-          {/* Quick Stats */}
+          {}
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <h3>Your Cookie Stats</h3>
@@ -61,7 +60,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Recent Recipes */}
+          {}
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <h3>Recent Recipes</h3>
@@ -92,7 +91,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Quick Actions */}
+          {}
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <h3>Quick Actions</h3>
@@ -114,7 +113,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Profile */}
+          {}
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <h3>Your Profile</h3>

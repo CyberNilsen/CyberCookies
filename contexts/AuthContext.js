@@ -16,77 +16,93 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
   const router = useRouter()
 
-  // Check if user is logged in on app start
+  // Check for existing authentication on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('cybercookies_user')
-    if (savedUser) {
-      setUser(JSON.parse(savedUser))
-    }
-    setLoading(false)
+    checkAuth()
   }, [])
 
-  // Mock login function - replace with real API call
+  const checkAuth = async () => {
+    try {
+      const response = await fetch('/api/auth/me', {
+        credentials: 'include'
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        if (data.success) {
+          setUser(data.user)
+        }
+      }
+    } catch (error) {
+      console.error('Auth check failed:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   const login = async (email, password) => {
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({ email, password })
+      })
+
+      const data = await response.json()
       
-      // Mock validation - in real app, this would be API validation
-      if (email && password.length >= 6) {
-        const userData = {
-          id: Date.now(),
-          email: email,
-          name: email.split('@')[0],
-          createdAt: new Date().toISOString()
-        }
-        
-        setUser(userData)
-        localStorage.setItem('cybercookies_user', JSON.stringify(userData))
-        
-        return { success: true, user: userData }
+      if (data.success) {
+        setUser(data.user)
+        return { success: true, user: data.user }
       } else {
-        throw new Error('Invalid credentials')
+        return { success: false, error: data.error }
       }
     } catch (error) {
-      return { success: false, error: error.message }
+      return { success: false, error: 'Network error. Please try again.' }
     }
   }
 
-  // Mock signup function - replace with real API call
   const signup = async (email, password, confirmPassword) => {
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({ email, password, confirmPassword })
+      })
+
+      const data = await response.json()
       
-      if (password !== confirmPassword) {
-        throw new Error('Passwords do not match')
+      if (data.success) {
+        setUser(data.user)
+        return { success: true, user: data.user }
+      } else {
+        return { success: false, error: data.error }
       }
-      
-      if (password.length < 6) {
-        throw new Error('Password must be at least 6 characters')
-      }
-      
-      // Mock user creation
-      const userData = {
-        id: Date.now(),
-        email: email,
-        name: email.split('@')[0],
-        createdAt: new Date().toISOString()
-      }
-      
-      setUser(userData)
-      localStorage.setItem('cybercookies_user', JSON.stringify(userData))
-      
-      return { success: true, user: userData }
     } catch (error) {
-      return { success: false, error: error.message }
+      return { success: false, error: 'Network error. Please try again.' }
     }
   }
 
-  const logout = () => {
-    setUser(null)
-    localStorage.removeItem('cybercookies_user')
-    router.push('/')
+  const logout = async () => {
+    try {
+      await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include'
+      })
+      
+      setUser(null)
+      router.push('/')
+    } catch (error) {
+      console.error('Logout failed:', error)
+      // Still clear user state even if API call fails
+      setUser(null)
+      router.push('/')
+    }
   }
 
   const value = {

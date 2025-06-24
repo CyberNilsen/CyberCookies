@@ -29,7 +29,6 @@ export default function Login() {
       }
 
       if (result.success) {
-        // Redirect to dashboard after successful login/signup
         router.push('/dashboard')
       } else {
         setError(result.error)
@@ -54,7 +53,7 @@ export default function Login() {
       <div className={styles.loginContainer}>
         <div className={styles.loginCard}>
           
-          {/* Header */}
+          {}
           <div className={styles.loginHeader}>
             <div className={styles.cookieIcon}>🍪</div>
             <h1 className={styles.loginTitle}>
@@ -68,17 +67,17 @@ export default function Login() {
             </p>
           </div>
 
-          {/* Error Message */}
+          {}
           {error && (
             <div className={styles.errorMessage}>
               {error}
             </div>
           )}
 
-          {/* Form */}
+          {}
           <form onSubmit={handleSubmit} className={styles.loginForm}>
             
-            {/* Email Field */}
+            {}
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.formLabel}>
                 Email Address
@@ -95,7 +94,7 @@ export default function Login() {
               />
             </div>
 
-            {/* Password Field */}
+            {}
             <div className={styles.formGroup}>
               <label htmlFor="password" className={styles.formLabel}>
                 Password
@@ -112,7 +111,7 @@ export default function Login() {
               />
             </div>
 
-            {/* Confirm Password Field (Signup only) */}
+            {}
             {isSignup && (
               <div className={styles.formGroup}>
                 <label htmlFor="confirmPassword" className={styles.formLabel}>
@@ -131,7 +130,7 @@ export default function Login() {
               </div>
             )}
 
-            {/* Form Options (Login only) */}
+            {}
             {!isSignup && (
               <div className={styles.formOptions}>
                 <label className={styles.checkboxLabel}>
@@ -144,7 +143,7 @@ export default function Login() {
               </div>
             )}
 
-            {/* Submit Button */}
+            {}
             <button 
               type="submit" 
               className={styles.submitButton}
@@ -154,7 +153,7 @@ export default function Login() {
             </button>
           </form>
 
-          {/* Social Login */}
+          {}
           <div className={styles.socialLogin}>
             <div className={styles.divider}>
               <span className={styles.dividerText}>Or continue with</span>
@@ -172,7 +171,7 @@ export default function Login() {
             </div>
           </div>
 
-          {/* Toggle Mode */}
+          {}
           <div className={styles.toggleMode}>
             <p className={styles.toggleText}>
               {isSignup ? 'Already have an account?' : "Don't have an account?"}

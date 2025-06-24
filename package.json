@@ -21,8 +21,9 @@
   "homepage": "https://github.com/CyberNilsen/CyberCookies#readme",
   "description": "",
   "dependencies": {
+    "cookie": "^1.0.2",
     "next": "^15.3.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
