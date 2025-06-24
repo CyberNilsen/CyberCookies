@@ -45,8 +45,8 @@ While the theme is all about delicious cookies and recipes, the real focus is le
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/cybercookies.git
-   cd cybercookies
+   git clone https://github.com/CyberNilsen/CyberCookies.git
+   cd CyberCookies
    ```
 
 2. **Install dependencies**
